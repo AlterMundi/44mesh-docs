@@ -1,0 +1,74 @@
+# 44Mesh Documentation
+
+44Mesh is an open network architecture that enables communities, organizations, and researchers to run their own **autonomous system** with globally reachable infrastructure — without relying on centralized cloud providers.
+
+It combines BGP routing, public IPv4 space, ZeroTier overlay networking, and an AI-native sensor network model into a single deployable framework.
+
+---
+
+## What it does
+
+Every node in 44Mesh gets a **public IP address** that is reachable from anywhere on the Internet. Traffic is routed through a border router using BGP, while the underlying connectivity between nodes uses an encrypted ZeroTier overlay. This means nodes can be behind NAT, on mobile connections, or on any infrastructure — and still participate as publicly reachable hosts.
+
+```
+Internet
+   │
+   │ BGP (BIRD2)
+   ▼
+Border Router  ◄──── ZeroTier Controller
+   │
+   │ ZeroTier Overlay (encrypted)
+   ▼
+Mesh Nodes (public IPs, any location)
+   │
+   ▼
+Services / Sensors / AI Agents
+```
+
+---
+
+## Core Components
+
+| Component | Description |
+|-----------|-------------|
+| **Border Router** | Connects the mesh to the Internet via BGP; acts as the ingress node for all mesh traffic |
+| **ZeroTier Controller** | Manages mesh membership, address assignment, and ingress routing configuration |
+| **Mesh Nodes** | Distributed hosts running services, sensors, or AI workloads |
+| **ZeroTier UI** | Web interface for managing network members and configuration |
+| **Mock ISP** | Simulated upstream provider for local development and testing |
+
+---
+
+## Key Features
+
+- **Own your AS** — operate with your own Autonomous System number and IP allocations
+- **BGP-announced public IPs** — nodes are reachable from the global Internet
+- **ZeroTier overlay** — handles NAT traversal and encrypted transport automatically
+- **Ingress routing** — custom fork of ZeroTierOne installs per-node source routing automatically
+- **AI-native** — sensor data model and observation APIs designed for machine consumers
+- **Multi-arch containers** — all components ship as Docker images for amd64, arm64, and arm/v7
+- **CI/CD included** — GitHub Actions pipelines for build, validation, and self-hosted deployment
+
+---
+
+## Use Cases
+
+- **Community networks** — give neighborhoods or cooperatives real Internet presence
+- **Scientific sensors** — connect distributed instruments (weather, radio, environmental) under a single routable network
+- **Radio systems** — SDR receivers, amateur radio nodes, spectrum monitoring
+- **AI agent infrastructure** — provide a globally addressable sensor fabric that AI agents can query and coordinate across
+
+---
+
+## Navigate the Docs
+
+| Section | Content |
+|---------|---------|
+| [Overview](overview/what-is-44mesh.md) | Concepts, architecture, design goals |
+| [Getting Started](getting-started/prerequisites.md) | What you need and how to deploy |
+| [Network](network/addressing.md) | Addressing, BGP, ZeroTier, routing details |
+| [Deployment](deployment/border-router.md) | Step-by-step deployment for each component |
+| [Operations](operations/monitoring.md) | Monitoring, security, troubleshooting |
+| [Participation](participation/joining-44mesh.md) | How to join, operate a node, or contribute |
+| [AI Agents](ai-agents/overview.md) | Sensor data model, APIs, example agents |
+| [Reference](references/glossary.md) | Glossary and external links |

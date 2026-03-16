@@ -1,0 +1,94 @@
+site_name: 44Mesh Documentation
+site_description: Distributed BGP mesh network for communities, researchers, and AI agents
+site_url: https://docs.44mesh.net
+repo_url: https://github.com/buzondefede/44mesh
+repo_name: buzondefede/44mesh
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Overview:
+      - What is 44Mesh: overview/what-is-44mesh.md
+      - Architecture: overview/architecture.md
+      - Design Principles: overview/design-principles.md
+  - Getting Started:
+      - Prerequisites: getting-started/prerequisites.md
+      - Quickstart: getting-started/quickstart.md
+  - Network:
+      - Addressing: network/addressing.md
+      - BGP Routing: network/bgp.md
+      - ZeroTier Mesh: network/zerotier-mesh.md
+      - Routing & Policy: network/routing.md
+  - Deployment:
+      - Border Router: deployment/border-router.md
+      - Mesh Nodes: deployment/mesh-nodes.md
+      - ZeroTier UI: deployment/zerotier-ui.md
+      - Mock ISP (Testing): deployment/mock-isp.md
+  - Operations:
+      - Monitoring: operations/monitoring.md
+      - Security: operations/security.md
+      - Troubleshooting: operations/troubleshooting.md
+  - Participation:
+      - Joining 44Mesh: participation/joining-44mesh.md
+      - Operating a Node: participation/operating-a-node.md
+      - Contributing: participation/contributing.md
+  - AI Agents:
+      - Overview: ai-agents/overview.md
+      - Agent Discovery: ai-agents/agent-discovery.md
+      - Data Model: ai-agents/data-model.md
+      - Observation API: ai-agents/observation-api.md
+      - Example Agent: ai-agents/example-agent.md
+  - Reference:
+      - Glossary: references/glossary.md
+      - External Resources: references/external-resources.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/buzondefede/44mesh
