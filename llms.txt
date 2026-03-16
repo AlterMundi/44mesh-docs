@@ -1,0 +1,20 @@
+# 44Mesh Documentation
+
+> 44Mesh is an open network architecture that assigns publicly reachable IPv4 addresses to any device using BGP routing and a ZeroTier overlay mesh, designed for community networks, IoT sensors, and AI agents.
+
+## Docs
+
+- [What is 44Mesh](docs/overview/what-is-44mesh.md): Problem statement, solution overview, use cases, and relationship to AMPRNet 44/8
+- [Architecture](docs/overview/architecture.md): System layers, traffic flows, container architecture, and CI/CD pipeline
+- [Design Principles](docs/overview/design-principles.md): Eight core principles including sovereignty, public reachability, and automation
+- [Prerequisites](docs/getting-started/prerequisites.md): Requirements for border router operators and mesh node operators
+- [Quickstart](docs/getting-started/quickstart.md): End-to-end deployment walkthrough from border router to mesh node
+- [Addressing](docs/network/addressing.md): IPv4 allocation, address roles, CIDR layout, and ZeroTier pool configuration
+- [BGP Routing](docs/network/bgp.md): BIRD2 configuration, eBGP sessions, route filters, and session verification
+- [ZeroTier Mesh](docs/network/zerotier-mesh.md): Overlay mesh setup, AlterMundi fork features, controller API, and ingress routing
+- [Routing & Policy](docs/network/routing.md): Source-based policy routing for symmetric traffic paths
+- [Border Router Deployment](docs/deployment/border-router.md): Full border router setup with Docker Compose, health checks, and ZeroTier network creation
+- [Mesh Node Deployment](docs/deployment/mesh-nodes.md): Mesh node configuration, authorization, and service deployment
+- [Observation API](docs/ai-agents/observation-api.md): REST endpoints for querying sensor data from mesh nodes
+- [Data Model](docs/ai-agents/data-model.md): Observation, capability, alert, and node descriptor schemas
+- [Glossary](docs/references/glossary.md): Definitions for 23 key terms used throughout the documentation
