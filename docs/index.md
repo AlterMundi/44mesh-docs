@@ -41,7 +41,7 @@ Services / Sensors / AI Agents
 
 ## Key Features
 
-- **Own your AS** — operate with your own Autonomous System number and IP allocations
+- **Deploy in your AS** — operate with your own Autonomous System number and IP allocations
 - **BGP-announced public IPs** — nodes are reachable from the global Internet
 - **ZeroTier overlay** — handles NAT traversal and encrypted transport automatically
 - **Ingress routing** — custom fork of ZeroTierOne installs per-node source routing automatically
@@ -54,7 +54,7 @@ Services / Sensors / AI Agents
 ## Use Cases
 
 - **Community networks** — give neighborhoods or cooperatives real Internet presence
-- **Scientific sensors** — connect distributed instruments (weather, radio, environmental) under a single routable network
+- **Scientific sensors** — connect distributed instruments (weather, radio, environmental) under a single public routable network
 - **Radio systems** — SDR receivers, amateur radio nodes, spectrum monitoring
 - **AI agent infrastructure** — provide a globally addressable sensor fabric that AI agents can query and coordinate across
 
