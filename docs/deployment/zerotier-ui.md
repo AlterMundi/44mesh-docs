@@ -10,15 +10,15 @@ The ZeroTier UI is an optional web interface for managing the 44Mesh network. It
 
 | Container | Image | Purpose |
 |-----------|-------|---------|
-| `zerotier-ui` | `buzondefede/44mesh-zerotier-ui` | Web interface for ZeroTier controller |
+| `zerotier-ui` | built locally from `deploy/zerotier-ui/Dockerfile.ztncui` | Web interface for ZeroTier controller |
 
-The container reads the controller auth token from the shared `zerotier_data` volume, so it must run on the same host as the border router.
+The container reads the controller auth token from the `bird-border_zerotier_data` external volume, so it must run on the same host as the border router.
 
 ---
 
 ## Prerequisites
 
-The border router must be running and its `zerotier_data` volume must exist before deploying the UI.
+The border router must be running and its `bird-border_zerotier_data` Docker volume must exist before deploying the UI. This volume is created automatically by the bird-border stack and is referenced as an external volume by the UI.
 
 ---
 
@@ -134,4 +134,4 @@ In this setup, set `ZTNCUI_HTTP_ALL_INTERFACES=false` and bind only to localhost
 - **Source**: AlterMundi fork of `ztncui` (`v0.0.13-altermundi`)
 - **Auth token**: Read from `/var/lib/zerotier-one/authtoken.secret` (shared volume)
 - **Runs as**: Unprivileged `ztncui` user (via `gosu`)
-- **Volumes**: `zerotier_data` shared with border router (read-only access to auth token)
+- **Volumes**: `bird-border_zerotier_data` (external, read-only — created by the bird-border stack)

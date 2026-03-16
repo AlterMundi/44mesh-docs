@@ -10,8 +10,8 @@ The border router is the core component of 44Mesh. It runs the ZeroTier controll
 
 | Container | Image | Purpose |
 |-----------|-------|---------|
-| `zerotier` | `buzondefede/44mesh-bird-border` | ZeroTier controller (AlterMundi fork) |
-| `bird-border` | `buzondefede/44mesh-bird-border` | BIRD2 BGP daemon |
+| `zerotier` | `buzondefede/44mesh-zerotier:latest` | ZeroTier controller (AlterMundi fork) |
+| `bird-border` | built locally from `deploy/bird-border/Dockerfile` | BIRD2 BGP daemon |
 
 Both containers run on host networking and share a `zerotier_data` volume.
 

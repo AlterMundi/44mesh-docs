@@ -10,7 +10,7 @@ Mesh nodes are the distributed participants in the 44Mesh network. Each node con
 
 | Container | Image | Purpose |
 |-----------|-------|---------|
-| `zerotier` | `buzondefede/44mesh-zerotier` | ZeroTier client (AlterMundi fork) |
+| `zerotier` | built locally from `deploy/zerotier/Dockerfile` | ZeroTier client (AlterMundi fork) |
 
 The container runs on host networking and requires `NET_ADMIN` and `SYS_ADMIN` capabilities for source routing and tun/tap device management.
 

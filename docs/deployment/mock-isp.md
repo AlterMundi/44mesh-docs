@@ -47,13 +47,16 @@ cp .env.example .env
 ISP_AS=65001
 
 # Mock ISP's BGP IP (must match ISP_IP in border router .env)
-ISP_IP=203.0.113.1
+ISP_IP=172.30.0.1
 
 # Border router's BGP IP
-BORDER_ROUTER_IP=203.0.113.2
+BORDER_ROUTER_IP=172.30.0.100
 
 # Border router's AS number
 BORDER_ROUTER_AS=65000
+
+# The BGP peering subnet (link between mock ISP and border router)
+BGP_NETWORK_RANGE=172.30.0.0/24
 
 # Your mesh range (accepted from the border router)
 MESH_ADDRESS_RANGE=44.30.127.0/24
@@ -68,7 +71,7 @@ BGP_HOLD_TIME=90
 BGP_KEEPALIVE_TIME=30
 ```
 
-The `ISP_IP` and `BORDER_ROUTER_IP` here must match the corresponding values in `deploy/bird-border/.env`.
+The `ISP_IP` and `BORDER_ROUTER_IP` here must match the corresponding values in `deploy/bird-border/.env`. The default values (`172.30.0.x`) are pre-configured to work together out of the box for local testing.
 
 ---
 
@@ -87,8 +90,8 @@ The entrypoint generates the BIRD config from the template, validates the syntax
 On the mock ISP host:
 
 ```bash
-docker exec rpi-isp birdc show protocols
-docker exec rpi-isp birdc show route
+docker exec bird-isp birdc show protocols
+docker exec bird-isp birdc show route
 ```
 
 The `border` protocol should show `Established`.
@@ -151,7 +154,7 @@ The import filter restricts what the mock ISP accepts from the border router to 
    ```
 6. Verify the mesh prefix is visible in the mock ISP's routing table:
    ```bash
-   docker exec rpi-isp birdc "show route for 44.x.y.0/24"
+   docker exec bird-isp birdc "show route for 44.x.y.0/24"
    ```
 
 ---
