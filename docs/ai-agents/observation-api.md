@@ -1,3 +1,13 @@
+---
+title: Observation API
+description: REST endpoint specifications for querying sensor data including capabilities, observations, and actions.
+topics: [observation-api, rest-api, endpoints, sensor-data, flask, json-responses]
+related:
+  - docs/ai-agents/data-model.md
+  - docs/ai-agents/agent-discovery.md
+  - docs/ai-agents/example-agent.md
+---
+
 # Observation API
 
 The observation API is the standard interface through which AI agents query sensor data from mesh nodes. This page defines the endpoints, parameters, and response formats.

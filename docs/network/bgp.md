@@ -1,3 +1,14 @@
+---
+title: BGP Routing
+description: BIRD2 configuration, eBGP session management, route filters, and session verification commands.
+topics: [bgp, bird2, ebgp, route-advertisement, policy-routing, bgp-timers]
+related:
+  - docs/overview/architecture.md
+  - docs/network/addressing.md
+  - docs/network/routing.md
+  - docs/operations/troubleshooting.md
+---
+
 # BGP Routing
 
 44Mesh uses BGP (Border Gateway Protocol) to announce your IP block to the global Internet. The BIRD2 daemon runs on the border router and manages the BGP session with your upstream ISP or IXP.

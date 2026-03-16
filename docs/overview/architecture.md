@@ -1,3 +1,15 @@
+---
+title: Architecture
+description: System layers, traffic flows, container architecture, and CI/CD pipeline for 44Mesh.
+topics: [architecture, border-router, zerotier, bgp, source-routing, containers, traffic-flow]
+related:
+  - docs/overview/what-is-44mesh.md
+  - docs/network/bgp.md
+  - docs/network/zerotier-mesh.md
+  - docs/network/routing.md
+  - docs/deployment/border-router.md
+---
+
 # Architecture
 
 44Mesh connects distributed nodes into a single, publicly routable network. The architecture has four layers: the Internet edge (BGP), the overlay mesh (ZeroTier), the node layer, and the application layer (services, sensors, AI agents).

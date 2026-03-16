@@ -1,3 +1,14 @@
+---
+title: Quickstart
+description: End-to-end walkthrough deploying a minimal 44Mesh network with one border router and one mesh node.
+topics: [quickstart, deployment, docker-compose, configuration, verification, mock-isp]
+related:
+  - docs/getting-started/prerequisites.md
+  - docs/deployment/border-router.md
+  - docs/deployment/mesh-nodes.md
+  - docs/deployment/mock-isp.md
+---
+
 # Quickstart
 
 This guide walks through deploying a minimal 44Mesh network: one border router and one mesh node. It assumes you have already met the [prerequisites](prerequisites.md).

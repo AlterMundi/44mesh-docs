@@ -1,3 +1,12 @@
+---
+title: Glossary
+description: Definitions for 23 key terms used throughout 44Mesh documentation including BGP, ZeroTier, and networking concepts.
+topics: [glossary, definitions, terminology, bgp, zerotier, networking]
+related:
+  - docs/overview/what-is-44mesh.md
+  - docs/overview/architecture.md
+---
+
 # Glossary
 
 ---

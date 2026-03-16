@@ -1,3 +1,14 @@
+---
+title: AI Agents Overview
+description: Vision for AI agents as first-class 44Mesh network participants with discovery, querying, and coordination capabilities.
+topics: [ai-agents, sensor-fabric, discovery, rest-api, agent-types, network-participants]
+related:
+  - docs/ai-agents/data-model.md
+  - docs/ai-agents/observation-api.md
+  - docs/ai-agents/agent-discovery.md
+  - docs/ai-agents/example-agent.md
+---
+
 # AI Agents Overview
 
 44Mesh is designed from the ground up to support **AI agents as first-class network participants**. The network is not just infrastructure for humans — it is a globally addressable sensor fabric that AI systems can discover, query, and act upon.

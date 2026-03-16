@@ -1,3 +1,13 @@
+---
+title: Mesh Nodes
+description: Mesh node configuration, deployment with Docker Compose, authorization, IP assignment, and service deployment.
+topics: [mesh-nodes, deployment, docker-compose, zerotier-client, node-authorization, raspberry-pi]
+related:
+  - docs/getting-started/quickstart.md
+  - docs/network/zerotier-mesh.md
+  - docs/participation/operating-a-node.md
+---
+
 # Mesh Nodes
 
 Mesh nodes are the distributed participants in the 44Mesh network. Each node connects to the ZeroTier overlay, receives a public IP from the border router controller, and becomes directly reachable from the Internet.

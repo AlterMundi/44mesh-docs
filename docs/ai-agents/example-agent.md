@@ -1,3 +1,14 @@
+---
+title: Example Agent
+description: Complete Python anomaly detection agent that discovers nodes, collects temperature data, and detects statistical outliers.
+topics: [example-agent, python, anomaly-detection, node-discovery, data-collection]
+related:
+  - docs/ai-agents/overview.md
+  - docs/ai-agents/data-model.md
+  - docs/ai-agents/observation-api.md
+  - docs/ai-agents/agent-discovery.md
+---
+
 # Example Agent
 
 This page walks through a complete example of an AI agent that discovers nodes on a 44Mesh network, queries sensor data, and detects anomalies.

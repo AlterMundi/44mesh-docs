@@ -1,3 +1,14 @@
+---
+title: Agent Discovery
+description: How AI agents discover mesh nodes via IP scanning, controller API queries, and the capabilities endpoint.
+topics: [agent-discovery, ip-scanning, controller-api, capabilities-endpoint, node-discovery]
+related:
+  - docs/ai-agents/overview.md
+  - docs/ai-agents/data-model.md
+  - docs/ai-agents/observation-api.md
+  - docs/ai-agents/example-agent.md
+---
+
 # Agent Discovery
 
 Discovery is how AI agents find out which nodes exist on the network, what capabilities they offer, and how to query them.

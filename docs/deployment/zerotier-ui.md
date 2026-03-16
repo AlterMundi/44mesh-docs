@@ -1,3 +1,13 @@
+---
+title: ZeroTier UI
+description: Web interface deployment for managing ZeroTier networks, authorizing nodes, and configuring ingressNodeV4.
+topics: [zerotier-ui, web-interface, node-authorization, ingress-node, ip-pool-management]
+related:
+  - docs/deployment/border-router.md
+  - docs/deployment/mesh-nodes.md
+  - docs/operations/security.md
+---
+
 # ZeroTier UI
 
 The ZeroTier UI is an optional web interface for managing the 44Mesh network. It provides a graphical alternative to the controller API for authorizing nodes, managing IP assignments, and configuring the `ingressNodeV4` setting.

@@ -1,3 +1,14 @@
+---
+title: Prerequisites
+description: Requirements for border router operators (AS, IP block, BGP peer) and mesh node operators (Docker, connectivity).
+topics: [prerequisites, autonomous-system, ip-allocation, bgp-peer, docker, ip-forwarding, amprnet]
+related:
+  - docs/getting-started/quickstart.md
+  - docs/deployment/border-router.md
+  - docs/deployment/mesh-nodes.md
+  - docs/participation/joining-44mesh.md
+---
+
 # Prerequisites
 
 Before deploying 44Mesh, you need to gather network resources and prepare the host system. The requirements differ depending on your role: running a **border router** (full participation with public routing) or deploying **mesh nodes only** (joining an existing network).

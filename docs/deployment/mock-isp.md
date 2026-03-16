@@ -1,3 +1,13 @@
+---
+title: Mock ISP (Testing)
+description: Simulated BGP peer for local development and testing using RFC 5737 test prefixes.
+topics: [mock-isp, testing, bgp, bird2, local-development, rfc-5737]
+related:
+  - docs/getting-started/quickstart.md
+  - docs/network/bgp.md
+  - docs/deployment/border-router.md
+---
+
 # Mock ISP (Testing)
 
 The mock ISP component simulates an upstream BGP peer for local development and testing. It allows you to test the full 44Mesh stack — including BGP session establishment and route propagation — without a real ISP connection.

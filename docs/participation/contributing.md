@@ -1,3 +1,12 @@
+---
+title: Contributing
+description: Contribution guide for bug reports, documentation improvements, code changes, and CI/CD validation.
+topics: [contributing, git-workflow, bug-reports, documentation, ci-cd, testing]
+related:
+  - docs/deployment/mock-isp.md
+  - docs/participation/joining-44mesh.md
+---
+
 # Contributing
 
 44Mesh is an open project. Contributions are welcome in the form of bug reports, documentation improvements, code contributions, and new features.

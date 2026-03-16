@@ -1,3 +1,12 @@
+---
+title: Design Principles
+description: Eight core design principles guiding 44Mesh including sovereignty, public reachability, and automation.
+topics: [design-principles, sovereignty, public-reachability, automation, composability, ai-agents]
+related:
+  - docs/overview/what-is-44mesh.md
+  - docs/overview/architecture.md
+---
+
 # Design Principles
 
 44Mesh is built around a small set of principles that guide its architecture and implementation decisions.

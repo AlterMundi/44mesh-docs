@@ -1,3 +1,13 @@
+---
+title: Operating a Node
+description: Node operator responsibilities including updates, service deployment, firewall configuration, and monitoring.
+topics: [node-operations, maintenance, systemd, service-deployment, firewall, resource-monitoring]
+related:
+  - docs/deployment/mesh-nodes.md
+  - docs/operations/monitoring.md
+  - docs/ai-agents/observation-api.md
+---
+
 # Operating a Node
 
 This page covers ongoing responsibilities and best practices for operating a mesh node in 44Mesh.

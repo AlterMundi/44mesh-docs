@@ -1,3 +1,14 @@
+---
+title: Troubleshooting
+description: Diagnostic procedures for BGP session issues, ZeroTier connectivity problems, and routing failures.
+topics: [troubleshooting, bgp-diagnostics, zerotier-diagnostics, routing-issues, connectivity]
+related:
+  - docs/operations/monitoring.md
+  - docs/network/bgp.md
+  - docs/network/routing.md
+  - docs/network/zerotier-mesh.md
+---
+
 # Troubleshooting
 
 ---

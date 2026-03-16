@@ -1,3 +1,13 @@
+---
+title: Addressing
+description: IPv4 allocation, address roles, CIDR layout, ZeroTier pool configuration, and route advertisement.
+topics: [addressing, ipv4, cidr, amprnet, zerotier-pools, bgp-peering, ingress-node]
+related:
+  - docs/getting-started/prerequisites.md
+  - docs/network/bgp.md
+  - docs/network/zerotier-mesh.md
+---
+
 # Addressing
 
 44Mesh uses real, globally routable public IPv4 addresses for all mesh nodes. There is no private address space or NAT within the mesh — every node is directly reachable from the Internet.

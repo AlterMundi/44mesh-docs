@@ -1,3 +1,13 @@
+---
+title: Data Model
+description: Core data structures for observations, capabilities, node descriptors, and alerts in the AI agent ecosystem.
+topics: [data-model, observation, capability, alert, node-descriptor, json-schema]
+related:
+  - docs/ai-agents/overview.md
+  - docs/ai-agents/observation-api.md
+  - docs/ai-agents/example-agent.md
+---
+
 # Data Model
 
 This page defines the data structures used for sensor observations, capabilities, and events in the 44Mesh AI agent ecosystem.

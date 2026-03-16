@@ -1,3 +1,13 @@
+---
+title: What is 44Mesh
+description: Problem statement, solution overview, use cases, and relationship to AMPRNet 44/8.
+topics: [44mesh, amprnet, bgp, nat, overlay-network, community-networks, use-cases]
+related:
+  - docs/overview/architecture.md
+  - docs/overview/design-principles.md
+  - docs/getting-started/prerequisites.md
+---
+
 # What is 44Mesh
 
 44Mesh is a distributed networking framework that gives independent operators the ability to run **globally reachable infrastructure** — without depending on centralized hosting, cloud providers, or NAT workarounds.

@@ -1,3 +1,13 @@
+---
+title: Monitoring
+description: Health checks, BGP session status, routing verification, connectivity tests, and log inspection commands.
+topics: [monitoring, health-checks, bgp-status, routing-verification, connectivity-testing, logging]
+related:
+  - docs/operations/troubleshooting.md
+  - docs/operations/security.md
+  - docs/deployment/border-router.md
+---
+
 # Monitoring
 
 This page covers key metrics, health checks, and commands for monitoring a running 44Mesh network.

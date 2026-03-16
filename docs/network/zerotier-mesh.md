@@ -1,3 +1,14 @@
+---
+title: ZeroTier Mesh
+description: ZeroTier overlay setup, AlterMundi fork features, controller API, ingress routing, and node lifecycle.
+topics: [zerotier, overlay-network, nat-traversal, ingress-routing, zerotier-controller, altermundi-fork]
+related:
+  - docs/overview/architecture.md
+  - docs/network/addressing.md
+  - docs/deployment/border-router.md
+  - docs/deployment/mesh-nodes.md
+---
+
 # ZeroTier Mesh
 
 ZeroTier provides the overlay network that connects all mesh nodes. 44Mesh uses a [custom fork of ZeroTierOne](https://github.com/AlterMundi/ZeroTierOne) maintained by AlterMundi, with additions specifically designed for ingress routing.

@@ -1,3 +1,14 @@
+---
+title: Routing & Policy
+description: Source-based policy routing using Linux routing tables for symmetric traffic paths through border routers.
+topics: [policy-routing, source-routing, routing-tables, symmetric-routing, traffic-flow, linux-networking]
+related:
+  - docs/network/bgp.md
+  - docs/network/zerotier-mesh.md
+  - docs/overview/architecture.md
+  - docs/operations/troubleshooting.md
+---
+
 # Routing & Policy
 
 This page explains how traffic flows through the 44Mesh network in detail, focusing on the source-based policy routing that makes symmetric routing work.

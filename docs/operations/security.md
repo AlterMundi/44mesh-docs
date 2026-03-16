@@ -1,3 +1,13 @@
+---
+title: Security
+description: Container capabilities, network exposure, credentials management, TLS, BGP security, and firewall recommendations.
+topics: [security, container-capabilities, credentials, tls, rpki, bgp-authentication, firewall]
+related:
+  - docs/deployment/border-router.md
+  - docs/deployment/zerotier-ui.md
+  - docs/operations/troubleshooting.md
+---
+
 # Security
 
 This page covers the security model of 44Mesh and recommendations for hardening a deployment.

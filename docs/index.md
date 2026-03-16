@@ -1,3 +1,13 @@
+---
+title: 44Mesh Documentation
+description: Landing page and feature overview for the 44Mesh distributed BGP mesh network.
+topics: [44mesh, overview, bgp, zerotier, autonomous-system, ai-agents]
+related:
+  - docs/overview/what-is-44mesh.md
+  - docs/overview/architecture.md
+  - docs/getting-started/quickstart.md
+---
+
 # 44Mesh Documentation
 
 44Mesh is an open network architecture that enables communities, organizations, and researchers to run their own **autonomous system** with globally reachable infrastructure — without relying on centralized cloud providers.

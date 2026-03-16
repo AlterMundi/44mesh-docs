@@ -1,3 +1,14 @@
+---
+title: Border Router Deployment
+description: Step-by-step border router setup with Docker Compose, host preparation, health checks, and ZeroTier network creation.
+topics: [border-router, deployment, docker-compose, bird2, zerotier-controller, health-checks, ip-forwarding]
+related:
+  - docs/getting-started/prerequisites.md
+  - docs/getting-started/quickstart.md
+  - docs/network/bgp.md
+  - docs/network/zerotier-mesh.md
+---
+
 # Border Router Deployment
 
 The border router is the core component of 44Mesh. It runs the ZeroTier controller and the BIRD2 BGP daemon on the same host, connecting the mesh to the Internet.
