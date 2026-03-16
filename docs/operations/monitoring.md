@@ -1,6 +1,6 @@
 ---
 title: Monitoring
-description: Health checks, BGP session status, routing verification, connectivity tests, and log inspection commands.
+description: Commands for checking BGP sessions, routing tables, ZeroTier status, and end-to-end connectivity.
 topics: [monitoring, health-checks, bgp-status, routing-verification, connectivity-testing, logging]
 related:
   - docs/operations/troubleshooting.md

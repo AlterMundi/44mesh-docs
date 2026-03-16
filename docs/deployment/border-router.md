@@ -1,6 +1,6 @@
 ---
 title: Border Router Deployment
-description: Step-by-step border router setup with Docker Compose, host preparation, health checks, and ZeroTier network creation.
+description: Host preparation, Docker Compose config, deployment, health checks, and ZeroTier network creation.
 topics: [border-router, deployment, docker-compose, bird2, zerotier-controller, health-checks, ip-forwarding]
 related:
   - docs/getting-started/prerequisites.md

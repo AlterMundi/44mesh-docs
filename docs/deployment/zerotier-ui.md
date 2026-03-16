@@ -1,6 +1,6 @@
 ---
 title: ZeroTier UI
-description: Web interface deployment for managing ZeroTier networks, authorizing nodes, and configuring ingressNodeV4.
+description: Optional web UI for authorizing nodes, managing IP pools, and setting ingressNodeV4.
 topics: [zerotier-ui, web-interface, node-authorization, ingress-node, ip-pool-management]
 related:
   - docs/deployment/border-router.md

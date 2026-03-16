@@ -1,6 +1,6 @@
 ---
 title: Mesh Nodes
-description: Mesh node configuration, deployment with Docker Compose, authorization, IP assignment, and service deployment.
+description: Deploy a mesh node, authorize it, verify IP assignment, and run services on the public IP.
 topics: [mesh-nodes, deployment, docker-compose, zerotier-client, node-authorization, raspberry-pi]
 related:
   - docs/getting-started/quickstart.md

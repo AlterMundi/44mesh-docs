@@ -1,6 +1,6 @@
 ---
 title: Quickstart
-description: End-to-end walkthrough deploying a minimal 44Mesh network with one border router and one mesh node.
+description: Deploy one border router and one mesh node end-to-end; step 5 covers mock ISP for local testing.
 topics: [quickstart, deployment, docker-compose, configuration, verification, mock-isp]
 related:
   - docs/getting-started/prerequisites.md

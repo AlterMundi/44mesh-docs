@@ -1,6 +1,6 @@
 ---
 title: Prerequisites
-description: Requirements for border router operators (AS, IP block, BGP peer) and mesh node operators (Docker, connectivity).
+description: What border router operators need (AS, IP block, BGP peer) vs mesh node operators (Docker, outbound UDP).
 topics: [prerequisites, autonomous-system, ip-allocation, bgp-peer, docker, ip-forwarding, amprnet]
 related:
   - docs/getting-started/quickstart.md

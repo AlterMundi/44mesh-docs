@@ -1,6 +1,6 @@
 ---
 title: Security
-description: Container capabilities, network exposure, credentials management, TLS, BGP security, and firewall recommendations.
+description: Security model: container capabilities, exposed ports, credentials, TLS, and firewall rules.
 topics: [security, container-capabilities, credentials, tls, rpki, bgp-authentication, firewall]
 related:
   - docs/deployment/border-router.md

@@ -1,7 +1,7 @@
 ---
 title: 44Mesh Documentation
-description: Landing page and feature overview for the 44Mesh distributed BGP mesh network.
-topics: [44mesh, overview, bgp, zerotier, autonomous-system, ai-agents]
+description: Project introduction, core components, and key features.
+topics: [overview, bgp, zerotier, autonomous-system, ai-agents]
 related:
   - docs/overview/what-is-44mesh.md
   - docs/overview/architecture.md

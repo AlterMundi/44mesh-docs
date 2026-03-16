@@ -1,6 +1,6 @@
 ---
 title: BGP Routing
-description: BIRD2 configuration, eBGP session management, route filters, and session verification commands.
+description: BIRD2 eBGP configuration, environment variables, route filters, and birdc verification commands.
 topics: [bgp, bird2, ebgp, route-advertisement, policy-routing, bgp-timers]
 related:
   - docs/overview/architecture.md

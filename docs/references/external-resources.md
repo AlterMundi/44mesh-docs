@@ -1,6 +1,6 @@
 ---
 title: External Resources
-description: Links to 44Mesh repositories, BGP/networking specs, IP address resources, related projects, and infrastructure docs.
+description: Links to repos, RFCs, AMPRNet, BGP tools, related community network projects, and Docker docs.
 topics: [external-resources, links, references, bgp-tools, amprnet, docker]
 related:
   - docs/references/glossary.md

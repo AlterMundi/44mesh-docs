@@ -1,6 +1,6 @@
 ---
 title: Contributing
-description: Contribution guide for bug reports, documentation improvements, code changes, and CI/CD validation.
+description: How to contribute code, docs, or bug reports; includes CI/CD validation and mock ISP testing.
 topics: [contributing, git-workflow, bug-reports, documentation, ci-cd, testing]
 related:
   - docs/deployment/mock-isp.md

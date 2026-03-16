@@ -1,6 +1,6 @@
 ---
 title: AI Agents Overview
-description: Vision for AI agents as first-class 44Mesh network participants with discovery, querying, and coordination capabilities.
+description: Why 44Mesh treats AI agents as first-class participants, interaction model, and agent type taxonomy.
 topics: [ai-agents, sensor-fabric, discovery, rest-api, agent-types, network-participants]
 related:
   - docs/ai-agents/data-model.md

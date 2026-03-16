@@ -1,6 +1,6 @@
 ---
 title: ZeroTier Mesh
-description: ZeroTier overlay setup, AlterMundi fork features, controller API, ingress routing, and node lifecycle.
+description: AlterMundi ZeroTier fork with ingress routing, controller vs client roles, network creation, and node authorization.
 topics: [zerotier, overlay-network, nat-traversal, ingress-routing, zerotier-controller, altermundi-fork]
 related:
   - docs/overview/architecture.md

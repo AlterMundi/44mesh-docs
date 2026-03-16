@@ -1,6 +1,6 @@
 ---
 title: Operating a Node
-description: Node operator responsibilities including updates, service deployment, firewall configuration, and monitoring.
+description: Keeping a mesh node running: updates, auto-start, services, firewall, and resource usage.
 topics: [node-operations, maintenance, systemd, service-deployment, firewall, resource-monitoring]
 related:
   - docs/deployment/mesh-nodes.md

@@ -1,6 +1,6 @@
 ---
 title: Agent Discovery
-description: How AI agents discover mesh nodes via IP scanning, controller API queries, and the capabilities endpoint.
+description: Three discovery methods (IP scan, controller API, registry) and the /capabilities endpoint contract.
 topics: [agent-discovery, ip-scanning, controller-api, capabilities-endpoint, node-discovery]
 related:
   - docs/ai-agents/overview.md

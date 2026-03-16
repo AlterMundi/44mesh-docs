@@ -1,6 +1,6 @@
 ---
 title: Joining 44Mesh
-description: Two participation paths — joining as a mesh node operator or running your own border router with an autonomous system.
+description: Two paths: join as a mesh node (easy) or run a border router (requires AS + IP block).
 topics: [joining, participation, mesh-node, border-router, autonomous-system, amprnet, bgp-peering]
 related:
   - docs/getting-started/prerequisites.md

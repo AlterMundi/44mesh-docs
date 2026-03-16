@@ -1,6 +1,6 @@
 ---
 title: Routing & Policy
-description: Source-based policy routing using Linux routing tables for symmetric traffic paths through border routers.
+description: Why source-based policy routing is needed and how Linux routing tables (table 123, per-node tables) implement it.
 topics: [policy-routing, source-routing, routing-tables, symmetric-routing, traffic-flow, linux-networking]
 related:
   - docs/network/bgp.md

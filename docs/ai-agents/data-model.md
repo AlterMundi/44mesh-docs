@@ -1,6 +1,6 @@
 ---
 title: Data Model
-description: Core data structures for observations, capabilities, node descriptors, and alerts in the AI agent ecosystem.
+description: JSON schemas for observation, capability, node descriptor, and alert objects.
 topics: [data-model, observation, capability, alert, node-descriptor, json-schema]
 related:
   - docs/ai-agents/overview.md

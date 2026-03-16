@@ -1,6 +1,6 @@
 ---
 title: Example Agent
-description: Complete Python anomaly detection agent that discovers nodes, collects temperature data, and detects statistical outliers.
+description: Working Python agent that scans the network, queries temperature sensors, and flags outliers.
 topics: [example-agent, python, anomaly-detection, node-discovery, data-collection]
 related:
   - docs/ai-agents/overview.md

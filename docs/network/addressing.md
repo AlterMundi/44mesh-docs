@@ -1,6 +1,6 @@
 ---
 title: Addressing
-description: IPv4 allocation, address roles, CIDR layout, ZeroTier pool configuration, and route advertisement.
+description: How public IPv4 addresses are allocated, assigned to nodes via ZeroTier pools, and announced over BGP.
 topics: [addressing, ipv4, cidr, amprnet, zerotier-pools, bgp-peering, ingress-node]
 related:
   - docs/getting-started/prerequisites.md

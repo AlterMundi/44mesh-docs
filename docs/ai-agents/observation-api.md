@@ -1,6 +1,6 @@
 ---
 title: Observation API
-description: REST endpoint specifications for querying sensor data including capabilities, observations, and actions.
+description: REST endpoint spec: GET /capabilities, /observations, /observations/latest, POST /actions.
 topics: [observation-api, rest-api, endpoints, sensor-data, flask, json-responses]
 related:
   - docs/ai-agents/data-model.md

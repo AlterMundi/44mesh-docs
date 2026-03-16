@@ -1,6 +1,6 @@
 ---
 title: Glossary
-description: Definitions for 23 key terms used throughout 44Mesh documentation including BGP, ZeroTier, and networking concepts.
+description: 23 key terms: BGP, BIRD2, border router, mesh node, ZeroTier, ingressNodeV4, policy routing, etc.
 topics: [glossary, definitions, terminology, bgp, zerotier, networking]
 related:
   - docs/overview/what-is-44mesh.md

@@ -1,6 +1,6 @@
 ---
 title: Architecture
-description: System layers, traffic flows, container architecture, and CI/CD pipeline for 44Mesh.
+description: Four-layer system diagram, inbound/outbound traffic flows, and container architecture.
 topics: [architecture, border-router, zerotier, bgp, source-routing, containers, traffic-flow]
 related:
   - docs/overview/what-is-44mesh.md
