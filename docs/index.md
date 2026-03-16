@@ -59,9 +59,6 @@ Services / Sensors / AI Agents
 - **AI agent infrastructure** — provide a globally addressable sensor fabric that AI agents can query and coordinate across
 
 ---
-Here is a polished and more professional version of your requirements list. I've corrected the typos (like "IPv4" and "reachable") and refined the technical phrasing to sound more authoritative.
-
----
 
 ## Requirements
 
