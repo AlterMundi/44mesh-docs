@@ -2,13 +2,13 @@
 
 44Mesh is an open network architecture that enables communities, organizations, and researchers to run their own **autonomous system** with globally reachable infrastructure — without relying on centralized cloud providers.
 
-It combines BGP routing, public IPv4 space, ZeroTier overlay networking, and an AI-native sensor network model into a single deployable framework.
+It combines BGP routing, public IPv4 space  ZeroTier overlay networking into a single deployable framework.
 
 ---
 
 ## What it does
 
-Every node in 44Mesh gets a **public IP address** that is reachable from anywhere on the Internet. Traffic is routed through a border router using BGP, while the underlying connectivity between nodes uses an encrypted ZeroTier overlay. This means nodes can be behind NAT, on mobile connections, or on any infrastructure — and still participate as publicly reachable hosts.
+Every node in 44Mesh gets a **public IP address** that is reachable from anywhere on the Internet. Traffic is routed through a border router using BGP, while the underlying connectivity between nodes uses an encrypted ZeroTier mesh overlay. This means nodes can be behind NAT, on mobile connections, or on any infrastructure — and still participate as publicly reachable hosts.
 
 ```
 Internet
