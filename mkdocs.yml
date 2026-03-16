@@ -1,8 +1,8 @@
 site_name: 44Mesh Documentation
 site_description: Distributed BGP mesh network for communities, researchers, and AI agents
 site_url: https://docs.44mesh.net
-repo_url: https://github.com/buzondefede/44mesh
-repo_name: buzondefede/44mesh
+repo_url: https://github.com/altermundi/44mesh
+repo_name: altermundi/44mesh
 edit_uri: edit/main/docs/
 
 theme:
@@ -91,4 +91,4 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/buzondefede/44mesh
+      link: https://github.com/altermundi/44mesh

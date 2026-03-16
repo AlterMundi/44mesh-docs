@@ -19,7 +19,7 @@ This is the simplest path. You connect to an existing 44Mesh network operated by
 1. Install Docker and Docker Compose
 2. Clone the repository:
    ```bash
-   git clone https://github.com/buzondefede/44mesh.git
+   git clone https://github.com/altermundi/44mesh.git
    cd 44mesh/deploy/zerotier
    ```
 3. Configure:
@@ -100,5 +100,5 @@ Options for establishing a BGP session:
 
 ## Community and Support
 
-- **GitHub Issues**: Report bugs or ask questions at the [44mesh repository](https://github.com/buzondefede/44mesh/issues)
+- **GitHub Issues**: Report bugs or ask questions at the [44mesh repository](https://github.com/altermundi/44mesh/issues)
 - **Contributing**: See [Contributing](contributing.md) if you want to help improve the project

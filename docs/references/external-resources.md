@@ -4,7 +4,7 @@
 
 ## 44Mesh
 
-- **GitHub Repository**: [github.com/buzondefede/44mesh](https://github.com/buzondefede/44mesh)
+- **GitHub Repository**: [github.com/altermundi/44mesh](https://github.com/altermundi/44mesh)
 - **Docker Hub**: [hub.docker.com/u/buzondefede](https://hub.docker.com/u/buzondefede)
 - **AlterMundi ZeroTier Fork**: [github.com/AlterMundi/ZeroTierOne](https://github.com/AlterMundi/ZeroTierOne) (branch: `feature/ingress-node`)
 
