@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024 AlterMundi <docs@44mesh.net>
+#
+# SPDX-License-Identifier: CC-BY-SA-4.0
+
 mkdocs>=1.5.0
 mkdocs-material>=9.0.0
 pymdown-extensions>=10.0

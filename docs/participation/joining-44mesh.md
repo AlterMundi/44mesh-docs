@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2024 AlterMundi <docs@44mesh.net>
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # Joining 44Mesh
 
 There are two ways to participate in a 44Mesh network: as a **mesh node** (joining an existing network) or as a **border router operator** (running your own autonomous system).

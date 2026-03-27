@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2024 AlterMundi <docs@44mesh.net>
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # Routing & Policy
 
 This page explains how traffic flows through the 44Mesh network in detail, focusing on the source-based policy routing that makes symmetric routing work.

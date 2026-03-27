@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2024 AlterMundi <docs@44mesh.net>
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # Addressing
 
 44Mesh uses real, globally routable public IPv4 addresses for all mesh nodes. There is no private address space or NAT within the mesh — every node is directly reachable from the Internet.

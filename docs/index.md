@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2024 AlterMundi <docs@44mesh.net>
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # 44Mesh Documentation
 
 44Mesh is an open network architecture that enables communities, organizations, and researchers to run their own **autonomous system** with globally reachable infrastructure — without relying on centralized cloud providers.

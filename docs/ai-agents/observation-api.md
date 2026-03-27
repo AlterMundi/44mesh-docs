@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2024 AlterMundi <docs@44mesh.net>
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # Observation API
 
 The observation API is the standard interface through which AI agents query sensor data from mesh nodes. This page defines the endpoints, parameters, and response formats.

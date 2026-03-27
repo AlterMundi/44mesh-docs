@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2024 AlterMundi <docs@44mesh.net>
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # Prerequisites
 
 Before deploying 44Mesh, you need to gather network resources and prepare the host system. The requirements differ depending on your role: running a **border router** (full participation with public routing) or deploying **mesh nodes only** (joining an existing network).

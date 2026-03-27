@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2024 AlterMundi <docs@44mesh.net>
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # What is 44Mesh
 
 44Mesh is a distributed networking framework that gives independent operators the ability to run **globally reachable infrastructure** — without depending on centralized hosting, cloud providers, or NAT workarounds.

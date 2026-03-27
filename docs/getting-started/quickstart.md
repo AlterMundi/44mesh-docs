@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2024 AlterMundi <docs@44mesh.net>
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # Quickstart
 
 This guide walks through deploying a minimal 44Mesh network: one border router and one mesh node. It assumes you have already met the [prerequisites](prerequisites.md).

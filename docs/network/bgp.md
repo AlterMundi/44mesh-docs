@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2024 AlterMundi <docs@44mesh.net>
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # BGP Routing
 
 44Mesh uses BGP (Border Gateway Protocol) to announce your IP block to the global Internet. The BIRD2 daemon runs on the border router and manages the BGP session with your upstream ISP or IXP.

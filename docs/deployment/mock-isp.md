@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2024 AlterMundi <docs@44mesh.net>
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # Mock ISP (Testing)
 
 The mock ISP component simulates an upstream BGP peer for local development and testing. It allows you to test the full 44Mesh stack — including BGP session establishment and route propagation — without a real ISP connection.
