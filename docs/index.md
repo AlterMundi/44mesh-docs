@@ -1,8 +1,8 @@
 # 44Mesh Documentation
 
-44Mesh is an open network architecture that enables communities, organizations, and researchers to run their own **autonomous system** with globally reachable infrastructure — without relying on centralized cloud providers.
+44Mesh is an open networking framework that makes your distributed devices, sensors, and services globally reachable — under your own autonomous system, without cloud dependencies, accessible to both humans and agents.
 
-It combines BGP routing, public IPv4 space  ZeroTier overlay networking into a single deployable framework.
+No cloud provider required. You bring your own IP space and AS number; 44Mesh handles the rest.
 
 ---
 
