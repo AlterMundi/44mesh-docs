@@ -53,7 +53,6 @@ Services / Sensors / AI Agents
 
 ## Use Cases
 
-- **Community networks** — give neighborhoods or cooperatives real Internet presence
 - **Scientific sensors** — connect distributed instruments (weather, radio, environmental) under a single public routable network
 - **Radio systems** — SDR receivers, amateur radio nodes, spectrum monitoring
 - **AI agent infrastructure** — provide a globally addressable sensor fabric that AI agents can query and coordinate across
@@ -62,9 +61,7 @@ Services / Sensors / AI Agents
 
 ## Requirements
 
-* **IPv4 Address Range** – You must have an assigned block of IP addresses. In this project, allocations typically follow these standards:
-* **/24 (256 IPs):** Standard for a medium-sized community network.
-* **/28 or /29:** Recommended for smaller pilot projects.
+* **IPv4 Address Range** – You must have an assigned block of IP addresses.
 * **Autonomous System (AS)** – You must possess a private or registered **ASN** to establish peering. This allows the network to receive and process your **BGP** (Border Gateway Protocol) requests.
 * **Direct Connectivity** – Your gateway must be **publicly reachable** from the internet to establish stable peering sessions with other BGP nodes.
 

@@ -10,7 +10,7 @@ The framework is designed to be sovereign: you own the IP space, you run the inf
 
 ## The Problem
 
-Most community networks, research infrastructure, and distributed systems face the same limitations:
+Most research infrastructures and distributed systems face the same limitations:
 
 - Nodes are behind NAT and unreachable from the Internet
 - Public IPs are expensive or unavailable without an ISP relationship
@@ -49,7 +49,6 @@ For outbound traffic, a custom ZeroTier fork automatically installs source-based
 
 | Use Case | Description |
 |----------|-------------|
-| **Community networks** | Give neighborhoods, cooperatives, or local organizations real Internet presence |
 | **Radio networks** | SDR receivers, amateur radio repeaters, spectrum sensors |
 | **IoT / sensor networks** | Environmental monitoring, weather stations, distributed instruments |
 | **Distributed observatories** | Coordinate scientific sensors across geographies |
@@ -60,13 +59,10 @@ For outbound traffic, a custom ZeroTier fork automatically installs source-based
 
 ## Relationship to 44Net
 
-44Mesh can operate using address allocations from the **44/8 network** (administered by the [AMPRNet](https://www.ampr.org/) project for amateur radio operators), but it is not limited to that space.
+44Mesh can operate using address allocations from the **44net** (administered by the [AMPRNet](https://www.ampr.org/) project for amateur radio operators), but it is not limited to that space.
 
 It works equally well with:
 
-- Provider-assigned prefixes
-- RIR allocations (ARIN, LACNIC, RIPE, etc.)
-- Leased address blocks
 - Any other legitimately routable IPv4 space
 
 The name reflects the project's roots in the amateur radio and community networking communities.
