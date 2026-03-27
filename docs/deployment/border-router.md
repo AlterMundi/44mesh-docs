@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2024 AlterMundi <docs@44mesh.net>
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # Border Router Deployment
 
 The border router is the core component of 44Mesh. It runs the ZeroTier controller and the BIRD2 BGP daemon on the same host, connecting the mesh to the Internet.

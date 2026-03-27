@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2024 AlterMundi <docs@44mesh.net>
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # Agent Discovery
 
 Discovery is how AI agents find out which nodes exist on the network, what capabilities they offer, and how to query them.

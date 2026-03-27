@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2024 AlterMundi <docs@44mesh.net>
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # Architecture
 
 44Mesh connects distributed nodes into a single, publicly routable network. The architecture has four layers: the Internet edge (BGP), the overlay mesh (ZeroTier), the node layer, and the application layer (services, sensors, AI agents).

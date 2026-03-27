@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2024 AlterMundi <docs@44mesh.net>
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # Monitoring
 
 This page covers key metrics, health checks, and commands for monitoring a running 44Mesh network.

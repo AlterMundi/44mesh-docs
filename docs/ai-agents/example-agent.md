@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2024 AlterMundi <docs@44mesh.net>
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # Example Agent
 
 This page walks through a complete example of an AI agent that discovers nodes on a 44Mesh network, queries sensor data, and detects anomalies.

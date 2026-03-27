@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2024 AlterMundi <docs@44mesh.net>
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # Mesh Nodes
 
 Mesh nodes are the distributed participants in the 44Mesh network. Each node connects to the ZeroTier overlay, receives a public IP from the border router controller, and becomes directly reachable from the Internet.

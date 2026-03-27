@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2024 AlterMundi <docs@44mesh.net>
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # ZeroTier UI
 
 The ZeroTier UI is an optional web interface for managing the 44Mesh network. It provides a graphical alternative to the controller API for authorizing nodes, managing IP assignments, and configuring the `ingressNodeV4` setting.
