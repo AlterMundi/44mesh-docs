@@ -14,12 +14,8 @@ Before deploying 44Mesh, you need to gather network resources and prepare the ho
 
 ### Network Resources
 
-| Resource | Required | Notes |
-|----------|----------|-------|
-| **AS Number** | Yes | Obtained from an RIR (ARIN, LACNIC, RIPE, APNIC, AFRINIC) or borrowed from a sponsor |
-| **Public IPv4 Block** | Yes | `/24` or larger recommended; can be from RIR, AMPRNet (44/8), or leased |
-| **BGP Peer** | Yes | An ISP or IXP willing to establish a BGP session with your AS |
-| **BGP Peering IP** | Yes | A link-local or dedicated IP for the BGP session (assigned by your ISP) |
+A border router requires an AS number, a public IPv4 block (`/24` or larger), and a BGP peer which is typically your ISP or an IXP willing to establish a session with your AS.
+
 
 !!! note "AMPRNet allocations"
     If you are an amateur radio operator, you can apply for a `/24` from the [AMPRNet](https://www.ampr.org/) 44/8 block. This is free but requires an amateur radio license.
@@ -113,16 +109,16 @@ Once prerequisites are met, you will configure the following environment variabl
 
 ```bash
 # Border Router
-BORDER_ROUTER_AS=65000           # Your BGP AS number
-BORDER_ROUTER_IP=192.0.2.1       # Your BGP peering IP (secondary IP on host)
-ISP_IP=192.0.2.254               # Your ISP's BGP peer IP
-ISP_AS=65001                     # Your ISP's AS number
-MESH_ADDRESS_RANGE=44.x.y.0/24  # Your public IP block
+BORDER_ROUTER_AS=<your-asn>
+BORDER_ROUTER_IP=<border-router-ip>
+ISP_IP=<isp-bgp-peer-ip>
+ISP_AS=<isp-asn>
+MESH_ADDRESS_RANGE=<your-ip-block>
 BGP_HOLD_TIME=90
 BGP_KEEPALIVE_TIME=30
 
 # Mesh Nodes
-ZT_NETWORK_ID=<16-hex-chars>     # ZeroTier network ID
+ZT_NETWORK_ID=<16-hex-chars>
 ```
 
 See the [Quickstart](quickstart.md) for the full deployment sequence.

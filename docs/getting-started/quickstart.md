@@ -22,11 +22,11 @@ cp .env.example .env
 Edit `.env` with your values:
 
 ```bash
-BORDER_ROUTER_AS=65000           # Your AS number
-BORDER_ROUTER_IP=192.0.2.1       # Your BGP peering IP (must exist on the host)
-ISP_IP=192.0.2.254               # Your ISP's BGP peer IP
-ISP_AS=65001                     # Your ISP's AS number
-MESH_ADDRESS_RANGE=44.x.y.0/24  # Your allocated IP block
+BORDER_ROUTER_AS=<your-asn>
+BORDER_ROUTER_IP=<border-router-ip>
+ISP_IP=<isp-bgp-peer-ip>
+ISP_AS=<isp-asn>
+MESH_ADDRESS_RANGE=<your-ip-block>
 BGP_HOLD_TIME=90
 BGP_KEEPALIVE_TIME=30
 ```
@@ -72,7 +72,7 @@ curl -s -X POST http://localhost:9993/controller/network/$(docker exec zerotier 
     "name": "44mesh",
     "private": true,
     "v4AssignMode": {"zt": true},
-    "ipAssignmentPools": [{"ipRangeStart": "44.x.y.1", "ipRangeEnd": "44.x.y.254"}],
+    "ipAssignmentPools": [{"ipRangeStart": "<ip-range-start>", "ipRangeEnd": "<ip-range-end>"}],
     "routes": [{"target": "0.0.0.0/0", "via": null}],
     "ingressNodeV4": "<border-router-mesh-ip>"
   }'
@@ -95,7 +95,7 @@ cp .env.example .env
 Edit `.env`:
 
 ```bash
-ZTNCUI_PASSWD=your-admin-password
+ZTNCUI_PASSWD=<admin-password>
 ZTNCUI_HTTP_PORT=3180
 ```
 
@@ -165,11 +165,11 @@ cp .env.example .env
 Edit `.env`:
 
 ```bash
-ISP_AS=65001
-ISP_IP=192.0.2.254               # Must match ISP_IP in bird-border .env
-BORDER_ROUTER_IP=192.0.2.1
-BORDER_ROUTER_AS=65000
-MESH_ADDRESS_RANGE=44.x.y.0/24
+ISP_AS=<isp-asn>
+ISP_IP=<isp-bgp-peer-ip>
+BORDER_ROUTER_IP=<border-router-ip>
+BORDER_ROUTER_AS=<your-asn>
+MESH_ADDRESS_RANGE=<your-ip-block>
 TEST_PREFIX_1=192.0.2.0/24
 TEST_PREFIX_2=198.51.100.0/24
 TEST_PREFIX_3=203.0.113.0/24
@@ -209,8 +209,7 @@ Expected output shows `OK` status and an IP assignment.
 From the mesh node, test outbound routing:
 
 ```bash
-# Replace with your node's assigned public IP
-docker exec zerotier curl --interface 44.x.y.z https://ifconfig.me
+docker exec zerotier curl --interface <node-public-ip> https://ifconfig.me
 ```
 
 This should return the border router's public IP (traffic exits via the border router).
@@ -222,7 +221,7 @@ From outside the network, test inbound connectivity to a service running on a me
 docker exec zerotier python3 -m http.server 8080
 
 # From any Internet-connected host
-curl http://44.x.y.z:8080
+curl http://<node-public-ip>:8080
 ```
 
 ---
