@@ -149,26 +149,6 @@ This ensures **symmetric routing**: both inbound and outbound paths flow through
 
 ---
 
-## Source Routing Details
-
-On the **border router**, the entrypoint script installs:
-
-```bash
-ip rule add from <MESH_ADDRESS_RANGE> lookup 123
-ip route replace default via <ISP_IP> table 123
-```
-
-On each **mesh node**, the AlterMundi ZeroTier fork installs at authorization time:
-
-```bash
-ip rule add from <node-public-ip>/32 lookup <table>
-ip route add default via <ingressNodeV4> table <table>
-```
-
-This per-node rule ensures only traffic originating from the node's public IP uses the ingress path, leaving other traffic unaffected.
-
----
-
 ## Container Architecture
 
 All components run as Docker containers with host networking:

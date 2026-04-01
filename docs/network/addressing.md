@@ -14,37 +14,6 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 To operate a border router, you need a **publicly routable IPv4 block**. The minimum practical size is a `/24` (256 addresses), which is also the smallest block typically accepted by Internet routing tables.
 
-### Sources for Address Space
-
-| Source | How to Obtain | Notes |
-|--------|--------------|-------|
-| **AMPRNet (44/8)** | Apply at [ampr.org](https://www.ampr.org/) | Free; requires amateur radio license; `/24` allocations |
-| **RIR allocation** | Apply to ARIN, LACNIC, RIPE, APNIC, or AFRINIC | Requires justification; ongoing fees |
-| **Provider space** | Assigned by your ISP or hosting provider | Not portable; tied to the provider |
-| **Leased space** | Rent from an IP broker | Portable; available without RIR membership |
-
----
-
-## Address Roles
-
-Within your allocated block, addresses are assigned to specific roles:
-
-| Role | Quantity | Description |
-|------|----------|-------------|
-| **Border Router BGP IP** | 1 | The BGP router ID and peering address; assigned as a secondary IP on the host |
-| **Network address** | 1 | First address in the block (unusable) |
-| **Broadcast** | 1 | Last address in the block (unusable) |
-| **Mesh node pool** | Remainder | Assigned dynamically by the ZeroTier controller to joining nodes |
-
-Example for a `/24` block (`44.30.127.0/24`):
-
-```
-44.30.127.0     — network address
-44.30.127.1     — border router BGP IP (secondary IP on host)
-44.30.127.2–254 — mesh node pool (ZeroTier assignment pool)
-44.30.127.255   — broadcast
-```
-
 ---
 
 ## ZeroTier Address Assignment
@@ -55,8 +24,8 @@ The ZeroTier controller assigns addresses from a configured pool when nodes are 
 {
   "ipAssignmentPools": [
     {
-      "ipRangeStart": "44.30.127.2",
-      "ipRangeEnd": "44.30.127.254"
+      "ipRangeStart": "<your-block-first-usable-ip>",
+      "ipRangeEnd": "<your-block-last-usable-ip>"
     }
   ]
 }
@@ -72,9 +41,9 @@ The BGP session between the border router and the ISP uses a separate, small sub
 
 ```
 Example:
-ISP assigns: 203.0.113.0/30
-  203.0.113.1 — ISP's BGP peer IP  (set as ISP_IP in .env)
-  203.0.113.2 — Your border router BGP IP  (set as BORDER_ROUTER_IP in .env)
+ISP assigns: <peering-subnet>/30
+  <peering-subnet>.1 — ISP's BGP peer IP  (set as ISP_IP in .env)
+  <peering-subnet>.2 — Your border router BGP IP  (set as BORDER_ROUTER_IP in .env)
 ```
 
 This peering subnet is **not** from your mesh block. It is a link-local address for the BGP session only.
@@ -117,13 +86,13 @@ The `ingressNodeV4` address is typically the first IP in the mesh pool, assigned
 
 ```bash
 # Your announced IP block
-MESH_ADDRESS_RANGE=44.30.127.0/24
+MESH_ADDRESS_RANGE=<your-block>/24
 
 # BGP peering IPs (from ISP-assigned peering subnet)
-BORDER_ROUTER_IP=203.0.113.2      # Your end of the BGP link
-ISP_IP=203.0.113.1                # ISP's BGP peer
+BORDER_ROUTER_IP=<your-bgp-ip>    # Your end of the BGP link
+ISP_IP=<isp-bgp-ip>               # ISP's BGP peer
 
 # AS numbers
-BORDER_ROUTER_AS=65000
-ISP_AS=65001
+BORDER_ROUTER_AS=<your-asn>
+ISP_AS=<isp-asn>
 ```

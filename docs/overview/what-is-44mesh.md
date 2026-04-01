@@ -6,15 +6,17 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 # What is 44Mesh
 
-44Mesh is a distributed networking framework that gives independent operators the ability to run **globally reachable infrastructure** — without depending on centralized hosting, cloud providers, or NAT workarounds.
+44Mesh is a networking framework that allows research groups, independent operators or anyone who owns or manages an **Autonomous System (AS)** to run publicly reachable infrastructure on their own terms — without depending on cloud providers, commercial hosting, or NAT workarounds.
 
-It is built around three ideas: public routing, overlay connectivity, and distributed compute and sensing.
+44Mesh connects a BGP border router (which announces your IP block to the Internet) with a ZeroTier overlay mesh (which connects your nodes securely, regardless of where they are physically located). The result is that every node in the mesh gets a **real, globally routable public IP address** — whether it's running on a server in a data center, a Raspberry Pi at a remote site, or a laptop behind a home router.
+
+The framework is designed to be sovereign: you own the IP space, you run the infrastructure, and you control who joins the network. 44Mesh provides the tooling to make that operationally practical.
 
 ---
 
 ## The Problem
 
-Most community networks, research infrastructure, and distributed systems face the same limitations:
+Most research infrastructures and distributed systems face the same limitations:
 
 - Nodes are behind NAT and unreachable from the Internet
 - Public IPs are expensive or unavailable without an ISP relationship
@@ -53,7 +55,6 @@ For outbound traffic, a custom ZeroTier fork automatically installs source-based
 
 | Use Case | Description |
 |----------|-------------|
-| **Community networks** | Give neighborhoods, cooperatives, or local organizations real Internet presence |
 | **Radio networks** | SDR receivers, amateur radio repeaters, spectrum sensors |
 | **IoT / sensor networks** | Environmental monitoring, weather stations, distributed instruments |
 | **Distributed observatories** | Coordinate scientific sensors across geographies |
@@ -64,13 +65,10 @@ For outbound traffic, a custom ZeroTier fork automatically installs source-based
 
 ## Relationship to 44Net
 
-44Mesh can operate using address allocations from the **44/8 network** (administered by the [AMPRNet](https://www.ampr.org/) project for amateur radio operators), but it is not limited to that space.
+44Mesh can operate using address allocations from the **44net** (administered by the [AMPRNet](https://www.ampr.org/) project for amateur radio operators), but it is not limited to that space.
 
 It works equally well with:
 
-- Provider-assigned prefixes
-- RIR allocations (ARIN, LACNIC, RIPE, etc.)
-- Leased address blocks
 - Any other legitimately routable IPv4 space
 
 The name reflects the project's roots in the amateur radio and community networking communities.

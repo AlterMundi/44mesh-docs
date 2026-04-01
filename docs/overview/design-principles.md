@@ -62,31 +62,18 @@ The goal is that adding a new node requires only joining the network and authori
 
 ---
 
-## 6. Machines as First-Class Participants
-
-The network is designed from the start to support **AI agents and automated systems** as participants, not just human-operated services.
-
-This shapes several decisions:
-- Nodes expose machine-readable capability metadata
-- Sensor data follows a structured, consistent schema
-- APIs are designed for programmatic consumption
-- The observation model treats sensor readings as first-class objects with location, timestamp, and confidence metadata
-
----
-
-## 7. Composability
+## 6. Composability
 
 Each component is independently deployable:
 - The border router can run without the web UI
 - The mock ISP is purely a development tool
 - Mesh nodes have no dependency on the UI
-- The ZeroTier controller is embedded in the border router but can be separated
 
 This allows operators to adopt components selectively and integrate with existing infrastructure.
 
 ---
 
-## 8. Open Standards
+## 7. Open Standards
 
 Where possible, 44Mesh uses standard protocols:
 - **BGP** (RFC 4271) for Internet routing
