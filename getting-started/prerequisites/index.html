@@ -1993,37 +1993,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 <hr />
 <h2 id="border-router-prerequisites">Border Router Prerequisites<a class="headerlink" href="#border-router-prerequisites" title="Permanent link">&para;</a></h2>
 <h3 id="network-resources">Network Resources<a class="headerlink" href="#network-resources" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Resource</th>
-<th>Required</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>AS Number</strong></td>
-<td>Yes</td>
-<td>Obtained from an RIR (ARIN, LACNIC, RIPE, APNIC, AFRINIC) or borrowed from a sponsor</td>
-</tr>
-<tr>
-<td><strong>Public IPv4 Block</strong></td>
-<td>Yes</td>
-<td><code>/24</code> or larger recommended; can be from RIR, AMPRNet (44/8), or leased</td>
-</tr>
-<tr>
-<td><strong>BGP Peer</strong></td>
-<td>Yes</td>
-<td>An ISP or IXP willing to establish a BGP session with your AS</td>
-</tr>
-<tr>
-<td><strong>BGP Peering IP</strong></td>
-<td>Yes</td>
-<td>A link-local or dedicated IP for the BGP session (assigned by your ISP)</td>
-</tr>
-</tbody>
-</table>
+<p>A border router requires an AS number, a public IPv4 block (<code>/24</code> or larger), and a BGP peer which is typically your ISP or an IXP willing to establish a session with your AS.</p>
 <div class="admonition note">
 <p class="admonition-title">AMPRNet allocations</p>
 <p>If you are an amateur radio operator, you can apply for a <code>/24</code> from the <a href="https://www.ampr.org/">AMPRNet</a> 44/8 block. This is free but requires an amateur radio license.</p>
@@ -2171,16 +2141,16 @@ Then: <code>systemctl restart systemd-networkd</code></p>
 <h2 id="what-you-will-configure">What You Will Configure<a class="headerlink" href="#what-you-will-configure" title="Permanent link">&para;</a></h2>
 <p>Once prerequisites are met, you will configure the following environment variables:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Border Router</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nv">BORDER_ROUTER_AS</span><span class="o">=</span><span class="m">65000</span><span class="w">           </span><span class="c1"># Your BGP AS number</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nv">BORDER_ROUTER_IP</span><span class="o">=</span><span class="m">192</span>.0.2.1<span class="w">       </span><span class="c1"># Your BGP peering IP (secondary IP on host)</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nv">ISP_IP</span><span class="o">=</span><span class="m">192</span>.0.2.254<span class="w">               </span><span class="c1"># Your ISP&#39;s BGP peer IP</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nv">ISP_AS</span><span class="o">=</span><span class="m">65001</span><span class="w">                     </span><span class="c1"># Your ISP&#39;s AS number</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nv">MESH_ADDRESS_RANGE</span><span class="o">=</span><span class="m">44</span>.x.y.0/24<span class="w">  </span><span class="c1"># Your public IP block</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nv">BORDER_ROUTER_AS</span><span class="o">=</span>&lt;your-asn&gt;
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nv">BORDER_ROUTER_IP</span><span class="o">=</span>&lt;border-router-ip&gt;
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nv">ISP_IP</span><span class="o">=</span>&lt;isp-bgp-peer-ip&gt;
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nv">ISP_AS</span><span class="o">=</span>&lt;isp-asn&gt;
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nv">MESH_ADDRESS_RANGE</span><span class="o">=</span>&lt;your-ip-block&gt;
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="nv">BGP_HOLD_TIME</span><span class="o">=</span><span class="m">90</span>
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="nv">BGP_KEEPALIVE_TIME</span><span class="o">=</span><span class="m">30</span>
 <a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
 <a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c1"># Mesh Nodes</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="nv">ZT_NETWORK_ID</span><span class="o">=</span>&lt;<span class="m">16</span>-hex-chars&gt;<span class="w">     </span><span class="c1"># ZeroTier network ID</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="nv">ZT_NETWORK_ID</span><span class="o">=</span>&lt;<span class="m">16</span>-hex-chars&gt;
 </code></pre></div>
 <p>See the <a href="../quickstart/">Quickstart</a> for the full deployment sequence.</p>
 

@@ -2029,11 +2029,11 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>cp<span class="w"> </span>.env.example<span class="w"> </span>.env
 </code></pre></div>
 <p>Edit <code>.env</code> with your values:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">BORDER_ROUTER_AS</span><span class="o">=</span><span class="m">65000</span><span class="w">           </span><span class="c1"># Your AS number</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nv">BORDER_ROUTER_IP</span><span class="o">=</span><span class="m">192</span>.0.2.1<span class="w">       </span><span class="c1"># Your BGP peering IP (must exist on the host)</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nv">ISP_IP</span><span class="o">=</span><span class="m">192</span>.0.2.254<span class="w">               </span><span class="c1"># Your ISP&#39;s BGP peer IP</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nv">ISP_AS</span><span class="o">=</span><span class="m">65001</span><span class="w">                     </span><span class="c1"># Your ISP&#39;s AS number</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nv">MESH_ADDRESS_RANGE</span><span class="o">=</span><span class="m">44</span>.x.y.0/24<span class="w">  </span><span class="c1"># Your allocated IP block</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">BORDER_ROUTER_AS</span><span class="o">=</span>&lt;your-asn&gt;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nv">BORDER_ROUTER_IP</span><span class="o">=</span>&lt;border-router-ip&gt;
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nv">ISP_IP</span><span class="o">=</span>&lt;isp-bgp-peer-ip&gt;
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nv">ISP_AS</span><span class="o">=</span>&lt;isp-asn&gt;
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nv">MESH_ADDRESS_RANGE</span><span class="o">=</span>&lt;your-ip-block&gt;
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nv">BGP_HOLD_TIME</span><span class="o">=</span><span class="m">90</span>
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nv">BGP_KEEPALIVE_TIME</span><span class="o">=</span><span class="m">30</span>
 </code></pre></div>
@@ -2064,7 +2064,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="s1">    &quot;name&quot;: &quot;44mesh&quot;,</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="s1">    &quot;private&quot;: true,</span>
 <a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="s1">    &quot;v4AssignMode&quot;: {&quot;zt&quot;: true},</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="s1">    &quot;ipAssignmentPools&quot;: [{&quot;ipRangeStart&quot;: &quot;44.x.y.1&quot;, &quot;ipRangeEnd&quot;: &quot;44.x.y.254&quot;}],</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="s1">    &quot;ipAssignmentPools&quot;: [{&quot;ipRangeStart&quot;: &quot;&lt;ip-range-start&gt;&quot;, &quot;ipRangeEnd&quot;: &quot;&lt;ip-range-end&gt;&quot;}],</span>
 <a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="s1">    &quot;routes&quot;: [{&quot;target&quot;: &quot;0.0.0.0/0&quot;, &quot;via&quot;: null}],</span>
 <a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="s1">    &quot;ingressNodeV4&quot;: &quot;&lt;border-router-mesh-ip&gt;&quot;</span>
 <a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="s1">  }&#39;</span>
@@ -2080,7 +2080,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>cp<span class="w"> </span>.env.example<span class="w"> </span>.env
 </code></pre></div>
 <p>Edit <code>.env</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nv">ZTNCUI_PASSWD</span><span class="o">=</span>your-admin-password
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nv">ZTNCUI_PASSWD</span><span class="o">=</span>&lt;admin-password&gt;
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nv">ZTNCUI_HTTP_PORT</span><span class="o">=</span><span class="m">3180</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
@@ -2120,11 +2120,11 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>cp<span class="w"> </span>.env.example<span class="w"> </span>.env
 </code></pre></div>
 <p>Edit <code>.env</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nv">ISP_AS</span><span class="o">=</span><span class="m">65001</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nv">ISP_IP</span><span class="o">=</span><span class="m">192</span>.0.2.254<span class="w">               </span><span class="c1"># Must match ISP_IP in bird-border .env</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="nv">BORDER_ROUTER_IP</span><span class="o">=</span><span class="m">192</span>.0.2.1
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="nv">BORDER_ROUTER_AS</span><span class="o">=</span><span class="m">65000</span>
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="nv">MESH_ADDRESS_RANGE</span><span class="o">=</span><span class="m">44</span>.x.y.0/24
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nv">ISP_AS</span><span class="o">=</span>&lt;isp-asn&gt;
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nv">ISP_IP</span><span class="o">=</span>&lt;isp-bgp-peer-ip&gt;
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="nv">BORDER_ROUTER_IP</span><span class="o">=</span>&lt;border-router-ip&gt;
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="nv">BORDER_ROUTER_AS</span><span class="o">=</span>&lt;your-asn&gt;
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="nv">MESH_ADDRESS_RANGE</span><span class="o">=</span>&lt;your-ip-block&gt;
 <a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="nv">TEST_PREFIX_1</span><span class="o">=</span><span class="m">192</span>.0.2.0/24
 <a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="nv">TEST_PREFIX_2</span><span class="o">=</span><span class="m">198</span>.51.100.0/24
 <a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="nv">TEST_PREFIX_3</span><span class="o">=</span><span class="m">203</span>.0.113.0/24
@@ -2146,8 +2146,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 <p>Expected output shows <code>OK</code> status and an IP assignment.</p>
 <h3 id="public-reachability">Public Reachability<a class="headerlink" href="#public-reachability" title="Permanent link">&para;</a></h3>
 <p>From the mesh node, test outbound routing:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># Replace with your node&#39;s assigned public IP</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>zerotier<span class="w"> </span>curl<span class="w"> </span>--interface<span class="w"> </span><span class="m">44</span>.x.y.z<span class="w"> </span>https://ifconfig.me
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>zerotier<span class="w"> </span>curl<span class="w"> </span>--interface<span class="w"> </span>&lt;node-public-ip&gt;<span class="w"> </span>https://ifconfig.me
 </code></pre></div>
 <p>This should return the border router's public IP (traffic exits via the border router).</p>
 <p>From outside the network, test inbound connectivity to a service running on a mesh node:</p>
@@ -2155,7 +2154,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>zerotier<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>http.server<span class="w"> </span><span class="m">8080</span>
 <a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
 <a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="c1"># From any Internet-connected host</span>
-<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>curl<span class="w"> </span>http://44.x.y.z:8080
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>curl<span class="w"> </span>http://&lt;node-public-ip&gt;:8080
 </code></pre></div>
 <hr />
 <h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
