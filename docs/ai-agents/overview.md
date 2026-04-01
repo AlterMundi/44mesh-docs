@@ -61,18 +61,6 @@ Nodes expose **machine-readable metadata** describing their capabilities. Agents
 
 ---
 
-## Agent Types
-
-| Agent Type | Description |
-|------------|-------------|
-| **Sensor aggregator** | Queries observations from multiple nodes, produces higher-level views |
-| **Anomaly detector** | Monitors observation streams for edge cases and raises alerts |
-| **Coordinator** | Schedules observations across nodes, manages resource allocation |
-| **Predictor** | Uses historical observation data to forecast future states |
-| **Relay** | Bridges between 44Mesh sensor data and external systems (databases, APIs, dashboards) |
-
----
-
 ## Network Properties That Enable AI Agents
 
 | Property | Benefit for AI Agents |
@@ -85,12 +73,7 @@ Nodes expose **machine-readable metadata** describing their capabilities. Agents
 
 ---
 
-## Getting Started as an Agent Developer
-
-1. **Understand the data model** — See [Data Model](data-model.md)
-2. **Learn the observation API** — See [Observation API](observation-api.md)
-3. **Implement discovery** — See [Agent Discovery](agent-discovery.md)
-4. **Run the example** — See [Example Agent](example-agent.md)
+### **Understand the data model** — See [Data Model](data-model.md)
 
 ---
 
