@@ -744,17 +744,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#source-routing-details" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Source Routing Details
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#container-architecture" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2040,17 +2029,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#source-routing-details" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Source Routing Details
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#container-architecture" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2206,39 +2184,28 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 <p>Each mesh node has source-based policy routing installed by the ZeroTier fork. When a packet is sourced from its assigned public IP, the kernel uses routing table 123, which sends the packet to the border router. The border router then forwards it to the ISP.</p>
 <p>This ensures <strong>symmetric routing</strong>: both inbound and outbound paths flow through the border router, which is required for BGP to work correctly.</p>
 <hr />
-<h2 id="source-routing-details">Source Routing Details<a class="headerlink" href="#source-routing-details" title="Permanent link">&para;</a></h2>
-<p>On the <strong>border router</strong>, the entrypoint script installs:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ip<span class="w"> </span>rule<span class="w"> </span>add<span class="w"> </span>from<span class="w"> </span>&lt;MESH_ADDRESS_RANGE&gt;<span class="w"> </span>lookup<span class="w"> </span><span class="m">123</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>ip<span class="w"> </span>route<span class="w"> </span>replace<span class="w"> </span>default<span class="w"> </span>via<span class="w"> </span>&lt;ISP_IP&gt;<span class="w"> </span>table<span class="w"> </span><span class="m">123</span>
-</code></pre></div>
-<p>On each <strong>mesh node</strong>, the AlterMundi ZeroTier fork installs at authorization time:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ip<span class="w"> </span>rule<span class="w"> </span>add<span class="w"> </span>from<span class="w"> </span>&lt;node-public-ip&gt;/32<span class="w"> </span>lookup<span class="w"> </span>&lt;table&gt;
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>ip<span class="w"> </span>route<span class="w"> </span>add<span class="w"> </span>default<span class="w"> </span>via<span class="w"> </span>&lt;ingressNodeV4&gt;<span class="w"> </span>table<span class="w"> </span>&lt;table&gt;
-</code></pre></div>
-<p>This per-node rule ensures only traffic originating from the node's public IP uses the ingress path, leaving other traffic unaffected.</p>
-<hr />
 <h2 id="container-architecture">Container Architecture<a class="headerlink" href="#container-architecture" title="Permanent link">&para;</a></h2>
 <p>All components run as Docker containers with host networking:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>docker network: host (required for BGP and ZeroTier)
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>bird-border:
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>  - image: buzondefede/44mesh-bird-border
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>  - capabilities: NET_ADMIN, SYS_ADMIN
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>  - device: /dev/net/tun
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>  - volume: zerotier_data (shared with zerotier-ui)
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>zerotier (mesh node):
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>  - image: buzondefede/44mesh-zerotier
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>  - capabilities: NET_ADMIN, SYS_ADMIN
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>  - device: /dev/net/tun
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>zerotier-ui (optional):
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>  - image: buzondefede/44mesh-zerotier-ui
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>  - volume: zerotier_data (read-only access to controller token)
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>rpi-isp (mock ISP, dev only):
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>  - image: buzondefede/44mesh-rpi-isp
-<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>  - capabilities: NET_ADMIN
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker network: host (required for BGP and ZeroTier)
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>bird-border:
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  - image: buzondefede/44mesh-bird-border
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  - capabilities: NET_ADMIN, SYS_ADMIN
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  - device: /dev/net/tun
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  - volume: zerotier_data (shared with zerotier-ui)
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>zerotier (mesh node):
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>  - image: buzondefede/44mesh-zerotier
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>  - capabilities: NET_ADMIN, SYS_ADMIN
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>  - device: /dev/net/tun
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>zerotier-ui (optional):
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>  - image: buzondefede/44mesh-zerotier-ui
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>  - volume: zerotier_data (read-only access to controller token)
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>rpi-isp (mock ISP, dev only):
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>  - image: buzondefede/44mesh-rpi-isp
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>  - capabilities: NET_ADMIN
 </code></pre></div>
 <hr />
 <h2 id="cicd">CI/CD<a class="headerlink" href="#cicd" title="Permanent link">&para;</a></h2>

@@ -1916,8 +1916,8 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 <h1 id="44mesh-documentation">44Mesh Documentation<a class="headerlink" href="#44mesh-documentation" title="Permanent link">&para;</a></h1>
-<p>44Mesh is an open network architecture that enables communities, organizations, and researchers to run their own <strong>autonomous system</strong> with globally reachable infrastructure — without relying on centralized cloud providers.</p>
-<p>It combines BGP routing, public IPv4 space  ZeroTier overlay networking into a single deployable framework.</p>
+<p>44Mesh is an open networking framework that makes your distributed devices, sensors, and services globally reachable — under your own autonomous system, without cloud dependencies, accessible to both humans and agents.</p>
+<p>No cloud provider required. You bring your own IP space and AS number; 44Mesh handles the rest.</p>
 <hr />
 <h2 id="what-it-does">What it does<a class="headerlink" href="#what-it-does" title="Permanent link">&para;</a></h2>
 <p>Every node in 44Mesh gets a <strong>public IP address</strong> that is reachable from anywhere on the Internet. Traffic is routed through a border router using BGP, while the underlying connectivity between nodes uses an encrypted ZeroTier mesh overlay. This means nodes can be behind NAT, on mobile connections, or on any infrastructure — and still participate as publicly reachable hosts.</p>
@@ -1980,7 +1980,6 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 <hr />
 <h2 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Community networks</strong> — give neighborhoods or cooperatives real Internet presence</li>
 <li><strong>Scientific sensors</strong> — connect distributed instruments (weather, radio, environmental) under a single public routable network</li>
 <li><strong>Radio systems</strong> — SDR receivers, amateur radio nodes, spectrum monitoring</li>
 <li><strong>AI agent infrastructure</strong> — provide a globally addressable sensor fabric that AI agents can query and coordinate across</li>
@@ -1988,9 +1987,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 <hr />
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>IPv4 Address Range</strong> – You must have an assigned block of IP addresses. In this project, allocations typically follow these standards:</li>
-<li><strong>/24 (256 IPs):</strong> Standard for a medium-sized community network.</li>
-<li><strong>/28 or /29:</strong> Recommended for smaller pilot projects.</li>
+<li><strong>IPv4 Address Range</strong> – You must have an assigned block of IP addresses.</li>
 <li><strong>Autonomous System (AS)</strong> – You must possess a private or registered <strong>ASN</strong> to establish peering. This allows the network to receive and process your <strong>BGP</strong> (Border Gateway Protocol) requests.</li>
 <li><strong>Direct Connectivity</strong> – Your gateway must be <strong>publicly reachable</strong> from the internet to establish stable peering sessions with other BGP nodes.</li>
 </ul>

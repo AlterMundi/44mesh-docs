@@ -705,10 +705,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-machines-as-first-class-participants" class="md-nav__link">
+  <a href="#6-composability" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Machines as First-Class Participants
+        6. Composability
       
     </span>
   </a>
@@ -716,21 +716,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-composability" class="md-nav__link">
+  <a href="#7-open-standards" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Composability
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-open-standards" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        8. Open Standards
+        7. Open Standards
       
     </span>
   </a>
@@ -1906,10 +1895,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-machines-as-first-class-participants" class="md-nav__link">
+  <a href="#6-composability" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Machines as First-Class Participants
+        6. Composability
       
     </span>
   </a>
@@ -1917,21 +1906,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-composability" class="md-nav__link">
+  <a href="#7-open-standards" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Composability
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-open-standards" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        8. Open Standards
+        7. Open Standards
       
     </span>
   </a>
@@ -1998,23 +1976,14 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 - Docker Compose orchestrates everything</p>
 <p>The goal is that adding a new node requires only joining the network and authorizing it — no additional configuration on the node.</p>
 <hr />
-<h2 id="6-machines-as-first-class-participants">6. Machines as First-Class Participants<a class="headerlink" href="#6-machines-as-first-class-participants" title="Permanent link">&para;</a></h2>
-<p>The network is designed from the start to support <strong>AI agents and automated systems</strong> as participants, not just human-operated services.</p>
-<p>This shapes several decisions:
-- Nodes expose machine-readable capability metadata
-- Sensor data follows a structured, consistent schema
-- APIs are designed for programmatic consumption
-- The observation model treats sensor readings as first-class objects with location, timestamp, and confidence metadata</p>
-<hr />
-<h2 id="7-composability">7. Composability<a class="headerlink" href="#7-composability" title="Permanent link">&para;</a></h2>
+<h2 id="6-composability">6. Composability<a class="headerlink" href="#6-composability" title="Permanent link">&para;</a></h2>
 <p>Each component is independently deployable:
 - The border router can run without the web UI
 - The mock ISP is purely a development tool
-- Mesh nodes have no dependency on the UI
-- The ZeroTier controller is embedded in the border router but can be separated</p>
+- Mesh nodes have no dependency on the UI</p>
 <p>This allows operators to adopt components selectively and integrate with existing infrastructure.</p>
 <hr />
-<h2 id="8-open-standards">8. Open Standards<a class="headerlink" href="#8-open-standards" title="Permanent link">&para;</a></h2>
+<h2 id="7-open-standards">7. Open Standards<a class="headerlink" href="#7-open-standards" title="Permanent link">&para;</a></h2>
 <p>Where possible, 44Mesh uses standard protocols:
 - <strong>BGP</strong> (RFC 4271) for Internet routing
 - <strong>ZeroTier</strong> for overlay networking (open source, auditable)

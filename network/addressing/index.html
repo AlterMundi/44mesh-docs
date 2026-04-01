@@ -864,34 +864,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Address Space Requirements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sources-for-address-space" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sources for Address Space
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#address-roles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Address Roles
-      
-    </span>
-  </a>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1865,34 +1837,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Address Space Requirements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sources-for-address-space" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sources for Address Space
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#address-roles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Address Roles
-      
-    </span>
-  </a>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1981,130 +1925,58 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 <hr />
 <h2 id="address-space-requirements">Address Space Requirements<a class="headerlink" href="#address-space-requirements" title="Permanent link">&para;</a></h2>
 <p>To operate a border router, you need a <strong>publicly routable IPv4 block</strong>. The minimum practical size is a <code>/24</code> (256 addresses), which is also the smallest block typically accepted by Internet routing tables.</p>
-<h3 id="sources-for-address-space">Sources for Address Space<a class="headerlink" href="#sources-for-address-space" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Source</th>
-<th>How to Obtain</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>AMPRNet (44/8)</strong></td>
-<td>Apply at <a href="https://www.ampr.org/">ampr.org</a></td>
-<td>Free; requires amateur radio license; <code>/24</code> allocations</td>
-</tr>
-<tr>
-<td><strong>RIR allocation</strong></td>
-<td>Apply to ARIN, LACNIC, RIPE, APNIC, or AFRINIC</td>
-<td>Requires justification; ongoing fees</td>
-</tr>
-<tr>
-<td><strong>Provider space</strong></td>
-<td>Assigned by your ISP or hosting provider</td>
-<td>Not portable; tied to the provider</td>
-</tr>
-<tr>
-<td><strong>Leased space</strong></td>
-<td>Rent from an IP broker</td>
-<td>Portable; available without RIR membership</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="address-roles">Address Roles<a class="headerlink" href="#address-roles" title="Permanent link">&para;</a></h2>
-<p>Within your allocated block, addresses are assigned to specific roles:</p>
-<table>
-<thead>
-<tr>
-<th>Role</th>
-<th>Quantity</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Border Router BGP IP</strong></td>
-<td>1</td>
-<td>The BGP router ID and peering address; assigned as a secondary IP on the host</td>
-</tr>
-<tr>
-<td><strong>Network address</strong></td>
-<td>1</td>
-<td>First address in the block (unusable)</td>
-</tr>
-<tr>
-<td><strong>Broadcast</strong></td>
-<td>1</td>
-<td>Last address in the block (unusable)</td>
-</tr>
-<tr>
-<td><strong>Mesh node pool</strong></td>
-<td>Remainder</td>
-<td>Assigned dynamically by the ZeroTier controller to joining nodes</td>
-</tr>
-</tbody>
-</table>
-<p>Example for a <code>/24</code> block (<code>44.30.127.0/24</code>):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>44.30.127.0     — network address
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>44.30.127.1     — border router BGP IP (secondary IP on host)
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>44.30.127.2–254 — mesh node pool (ZeroTier assignment pool)
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>44.30.127.255   — broadcast
-</code></pre></div>
 <hr />
 <h2 id="zerotier-address-assignment">ZeroTier Address Assignment<a class="headerlink" href="#zerotier-address-assignment" title="Permanent link">&para;</a></h2>
 <p>The ZeroTier controller assigns addresses from a configured pool when nodes are authorized. The pool is set during network creation:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;ipAssignmentPools&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span><span class="nt">&quot;ipRangeStart&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;44.30.127.2&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="nt">&quot;ipRangeEnd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;44.30.127.254&quot;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p">]</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;ipAssignmentPools&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="nt">&quot;ipRangeStart&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;your-block-first-usable-ip&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="nt">&quot;ipRangeEnd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;your-block-last-usable-ip&gt;&quot;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
 </code></pre></div>
 <p>Each authorized node receives one IP from this pool. Assignments are persistent — the same node will receive the same IP on reconnect, as long as the controller's data volume is preserved.</p>
 <hr />
 <h2 id="bgp-peering-subnet">BGP Peering Subnet<a class="headerlink" href="#bgp-peering-subnet" title="Permanent link">&para;</a></h2>
 <p>The BGP session between the border router and the ISP uses a separate, small subnet — typically a <code>/30</code> or <code>/31</code> — assigned by the ISP for the peering link.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Example:
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>ISP assigns: 203.0.113.0/30
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  203.0.113.1 — ISP&#39;s BGP peer IP  (set as ISP_IP in .env)
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  203.0.113.2 — Your border router BGP IP  (set as BORDER_ROUTER_IP in .env)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Example:
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ISP assigns: &lt;peering-subnet&gt;/30
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  &lt;peering-subnet&gt;.1 — ISP&#39;s BGP peer IP  (set as ISP_IP in .env)
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  &lt;peering-subnet&gt;.2 — Your border router BGP IP  (set as BORDER_ROUTER_IP in .env)
 </code></pre></div>
 <p>This peering subnet is <strong>not</strong> from your mesh block. It is a link-local address for the BGP session only.</p>
 <hr />
 <h2 id="route-advertisement">Route Advertisement<a class="headerlink" href="#route-advertisement" title="Permanent link">&para;</a></h2>
 <p>The border router announces your entire mesh block (<code>MESH_ADDRESS_RANGE</code>) to the ISP via BGP. The ISP then propagates this advertisement to the global routing table.</p>
 <p>The BIRD configuration restricts exports to only your mesh range:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>protocol bgp isp {
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  export where net = &lt;MESH_ADDRESS_RANGE&gt;;
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  import all;
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>protocol bgp isp {
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  export where net = &lt;MESH_ADDRESS_RANGE&gt;;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  import all;
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>}
 </code></pre></div>
 <p>This prevents accidental announcement of other routes.</p>
 <hr />
 <h2 id="ingress-node-address">Ingress Node Address<a class="headerlink" href="#ingress-node-address" title="Permanent link">&para;</a></h2>
 <p>The <code>ingressNodeV4</code> parameter set in the ZeroTier network configuration is the <strong>ZeroTier-assigned IP of the border router</strong>. This is the address within the mesh that all nodes use as their default gateway for outbound traffic.</p>
 <p>When a node is authorized, the AlterMundi ZeroTier fork reads <code>ingressNodeV4</code> and installs:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ip<span class="w"> </span>rule<span class="w"> </span>add<span class="w"> </span>from<span class="w"> </span>&lt;node-public-ip&gt;/32<span class="w"> </span>lookup<span class="w"> </span>&lt;table&gt;
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>ip<span class="w"> </span>route<span class="w"> </span>add<span class="w"> </span>default<span class="w"> </span>via<span class="w"> </span>&lt;ingressNodeV4&gt;<span class="w"> </span>table<span class="w"> </span>&lt;table&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ip<span class="w"> </span>rule<span class="w"> </span>add<span class="w"> </span>from<span class="w"> </span>&lt;node-public-ip&gt;/32<span class="w"> </span>lookup<span class="w"> </span>&lt;table&gt;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>ip<span class="w"> </span>route<span class="w"> </span>add<span class="w"> </span>default<span class="w"> </span>via<span class="w"> </span>&lt;ingressNodeV4&gt;<span class="w"> </span>table<span class="w"> </span>&lt;table&gt;
 </code></pre></div>
 <p>The <code>ingressNodeV4</code> address is typically the first IP in the mesh pool, assigned to the border router when it joins its own network.</p>
 <hr />
 <h2 id="summary-of-environment-variables">Summary of Environment Variables<a class="headerlink" href="#summary-of-environment-variables" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Your announced IP block</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nv">MESH_ADDRESS_RANGE</span><span class="o">=</span><span class="m">44</span>.30.127.0/24
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># BGP peering IPs (from ISP-assigned peering subnet)</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nv">BORDER_ROUTER_IP</span><span class="o">=</span><span class="m">203</span>.0.113.2<span class="w">      </span><span class="c1"># Your end of the BGP link</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="nv">ISP_IP</span><span class="o">=</span><span class="m">203</span>.0.113.1<span class="w">                </span><span class="c1"># ISP&#39;s BGP peer</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="c1"># AS numbers</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="nv">BORDER_ROUTER_AS</span><span class="o">=</span><span class="m">65000</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="nv">ISP_AS</span><span class="o">=</span><span class="m">65001</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Your announced IP block</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nv">MESH_ADDRESS_RANGE</span><span class="o">=</span>&lt;your-block&gt;/24
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># BGP peering IPs (from ISP-assigned peering subnet)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nv">BORDER_ROUTER_IP</span><span class="o">=</span>&lt;your-bgp-ip&gt;<span class="w">    </span><span class="c1"># Your end of the BGP link</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nv">ISP_IP</span><span class="o">=</span>&lt;isp-bgp-ip&gt;<span class="w">               </span><span class="c1"># ISP&#39;s BGP peer</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># AS numbers</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="nv">BORDER_ROUTER_AS</span><span class="o">=</span>&lt;your-asn&gt;
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="nv">ISP_AS</span><span class="o">=</span>&lt;isp-asn&gt;
 </code></pre></div>
 
 

@@ -1921,11 +1921,12 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 <h1 id="what-is-44mesh">What is 44Mesh<a class="headerlink" href="#what-is-44mesh" title="Permanent link">&para;</a></h1>
-<p>44Mesh is a distributed networking framework that gives independent operators the ability to run <strong>globally reachable infrastructure</strong> — without depending on centralized hosting, cloud providers, or NAT workarounds.</p>
-<p>It is built around three ideas: public routing, overlay connectivity, and distributed compute and sensing.</p>
+<p>44Mesh is a networking framework that allows research groups, independent operators or anyone who owns or manages an <strong>Autonomous System (AS)</strong> to run publicly reachable infrastructure on their own terms — without depending on cloud providers, commercial hosting, or NAT workarounds.</p>
+<p>44Mesh connects a BGP border router (which announces your IP block to the Internet) with a ZeroTier overlay mesh (which connects your nodes securely, regardless of where they are physically located). The result is that every node in the mesh gets a <strong>real, globally routable public IP address</strong> — whether it's running on a server in a data center, a Raspberry Pi at a remote site, or a laptop behind a home router.</p>
+<p>The framework is designed to be sovereign: you own the IP space, you run the infrastructure, and you control who joins the network. 44Mesh provides the tooling to make that operationally practical.</p>
 <hr />
 <h2 id="the-problem">The Problem<a class="headerlink" href="#the-problem" title="Permanent link">&para;</a></h2>
-<p>Most community networks, research infrastructure, and distributed systems face the same limitations:</p>
+<p>Most research infrastructures and distributed systems face the same limitations:</p>
 <ul>
 <li>Nodes are behind NAT and unreachable from the Internet</li>
 <li>Public IPs are expensive or unavailable without an ISP relationship</li>
@@ -1959,10 +1960,6 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 </thead>
 <tbody>
 <tr>
-<td><strong>Community networks</strong></td>
-<td>Give neighborhoods, cooperatives, or local organizations real Internet presence</td>
-</tr>
-<tr>
 <td><strong>Radio networks</strong></td>
 <td>SDR receivers, amateur radio repeaters, spectrum sensors</td>
 </tr>
@@ -1986,12 +1983,9 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 </table>
 <hr />
 <h2 id="relationship-to-44net">Relationship to 44Net<a class="headerlink" href="#relationship-to-44net" title="Permanent link">&para;</a></h2>
-<p>44Mesh can operate using address allocations from the <strong>44/8 network</strong> (administered by the <a href="https://www.ampr.org/">AMPRNet</a> project for amateur radio operators), but it is not limited to that space.</p>
+<p>44Mesh can operate using address allocations from the <strong>44net</strong> (administered by the <a href="https://www.ampr.org/">AMPRNet</a> project for amateur radio operators), but it is not limited to that space.</p>
 <p>It works equally well with:</p>
 <ul>
-<li>Provider-assigned prefixes</li>
-<li>RIR allocations (ARIN, LACNIC, RIPE, etc.)</li>
-<li>Leased address blocks</li>
 <li>Any other legitimately routable IPv4 space</li>
 </ul>
 <p>The name reflects the project's roots in the amateur radio and community networking communities.</p>
